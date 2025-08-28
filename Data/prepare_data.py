@@ -19,7 +19,7 @@ for f in files:
     dfs.append(df)
 
 data = pd.concat(dfs, ignore_index=True)
-print(f"✅ Combined dataset size: {len(data)}")
+print(f" Combined dataset size: {len(data)}")
 
 # Select text + 28 emotions
 label_cols = [
@@ -51,5 +51,6 @@ train_df.to_csv(train_path, index=False)
 val_df.to_csv(val_path, index=False)
 test_df.to_csv(test_path, index=False)
 
-print(f"✅ Saved train/val/test splits to {OUTPUT_DIR}")
+print(f" Saved train/val/test splits to {OUTPUT_DIR}")
 print(f"   Train: {len(train_df)}, Val: {len(val_df)}, Test: {len(test_df)}")
+
