@@ -1,0 +1,347 @@
+2025-08-26 12:40:20,245 - __main__ - INFO - Starting Chapter 6: Gradient Boosting Machine Training
+2025-08-26 12:40:20,245 - __main__ - INFO - Configuration: {'bert_model': 'bert-base-uncased', 'max_length': 128, 'batch_size': 64, 'num_labels': 28, 'n_trials': 100, 'cv_folds': 5, 'random_state': 42, 'n_jobs': -1, 'use_xgboost': True, 'use_lightgbm': True, 'enable_gpu': True, 'threshold_optimization': True, 'statistical_testing': True}
+2025-08-26 12:40:20,245 - __main__ - INFO - Loading dataset...
+2025-08-26 12:40:27,081 - __main__ - INFO - Dataset sizes - Train: 168980, Val: 21122, Test: 21123
+2025-08-26 12:40:27,089 - __main__ - INFO - Loading BERT model: bert-base-uncased
+2025-08-26 12:40:30,804 - __main__ - INFO - Extracting embeddings for 168980 texts in 2641 batches
+2025-08-26 12:40:41,751 - __main__ - INFO - Processed 50/2641 batches
+2025-08-26 12:40:52,602 - __main__ - INFO - Processed 100/2641 batches
+2025-08-26 12:41:03,348 - __main__ - INFO - Processed 150/2641 batches
+2025-08-26 12:41:14,364 - __main__ - INFO - Processed 200/2641 batches
+2025-08-26 12:41:25,000 - __main__ - INFO - Processed 250/2641 batches
+2025-08-26 12:41:36,146 - __main__ - INFO - Processed 300/2641 batches
+2025-08-26 12:41:46,832 - __main__ - INFO - Processed 350/2641 batches
+2025-08-26 12:41:57,628 - __main__ - INFO - Processed 400/2641 batches
+2025-08-26 12:42:08,493 - __main__ - INFO - Processed 450/2641 batches
+2025-08-26 12:42:19,252 - __main__ - INFO - Processed 500/2641 batches
+2025-08-26 12:42:29,813 - __main__ - INFO - Processed 550/2641 batches
+2025-08-26 12:42:40,139 - __main__ - INFO - Processed 600/2641 batches
+2025-08-26 12:42:50,682 - __main__ - INFO - Processed 650/2641 batches
+2025-08-26 12:43:01,437 - __main__ - INFO - Processed 700/2641 batches
+2025-08-26 12:43:12,021 - __main__ - INFO - Processed 750/2641 batches
+2025-08-26 12:43:22,474 - __main__ - INFO - Processed 800/2641 batches
+2025-08-26 12:43:33,131 - __main__ - INFO - Processed 850/2641 batches
+2025-08-26 12:43:43,916 - __main__ - INFO - Processed 900/2641 batches
+2025-08-26 12:43:54,514 - __main__ - INFO - Processed 950/2641 batches
+2025-08-26 12:44:05,412 - __main__ - INFO - Processed 1000/2641 batches
+2025-08-26 12:44:16,171 - __main__ - INFO - Processed 1050/2641 batches
+2025-08-26 12:44:27,262 - __main__ - INFO - Processed 1100/2641 batches
+2025-08-26 12:44:37,797 - __main__ - INFO - Processed 1150/2641 batches
+2025-08-26 12:44:48,432 - __main__ - INFO - Processed 1200/2641 batches
+2025-08-26 12:44:59,392 - __main__ - INFO - Processed 1250/2641 batches
+2025-08-26 12:45:10,064 - __main__ - INFO - Processed 1300/2641 batches
+2025-08-26 12:45:20,638 - __main__ - INFO - Processed 1350/2641 batches
+2025-08-26 12:45:31,566 - __main__ - INFO - Processed 1400/2641 batches
+2025-08-26 12:45:42,143 - __main__ - INFO - Processed 1450/2641 batches
+2025-08-26 12:45:52,617 - __main__ - INFO - Processed 1500/2641 batches
+2025-08-26 12:46:03,011 - __main__ - INFO - Processed 1550/2641 batches
+2025-08-26 12:46:13,552 - __main__ - INFO - Processed 1600/2641 batches
+2025-08-26 12:46:24,232 - __main__ - INFO - Processed 1650/2641 batches
+2025-08-26 12:46:34,681 - __main__ - INFO - Processed 1700/2641 batches
+2025-08-26 12:46:45,356 - __main__ - INFO - Processed 1750/2641 batches
+2025-08-26 12:46:56,380 - __main__ - INFO - Processed 1800/2641 batches
+2025-08-26 12:47:07,165 - __main__ - INFO - Processed 1850/2641 batches
+2025-08-26 12:47:17,846 - __main__ - INFO - Processed 1900/2641 batches
+2025-08-26 12:47:28,414 - __main__ - INFO - Processed 1950/2641 batches
+2025-08-26 12:47:39,176 - __main__ - INFO - Processed 2000/2641 batches
+2025-08-26 12:47:49,627 - __main__ - INFO - Processed 2050/2641 batches
+2025-08-26 12:48:00,279 - __main__ - INFO - Processed 2100/2641 batches
+2025-08-26 12:48:11,066 - __main__ - INFO - Processed 2150/2641 batches
+2025-08-26 12:48:21,694 - __main__ - INFO - Processed 2200/2641 batches
+2025-08-26 12:48:32,340 - __main__ - INFO - Processed 2250/2641 batches
+2025-08-26 12:48:42,787 - __main__ - INFO - Processed 2300/2641 batches
+2025-08-26 12:48:53,213 - __main__ - INFO - Processed 2350/2641 batches
+2025-08-26 12:49:03,810 - __main__ - INFO - Processed 2400/2641 batches
+2025-08-26 12:49:14,443 - __main__ - INFO - Processed 2450/2641 batches
+2025-08-26 12:49:25,312 - __main__ - INFO - Processed 2500/2641 batches
+2025-08-26 12:49:36,059 - __main__ - INFO - Processed 2550/2641 batches
+2025-08-26 12:49:46,625 - __main__ - INFO - Processed 2600/2641 batches
+2025-08-26 12:49:55,178 - __main__ - INFO - Caching embeddings to train_embeddings.npy
+2025-08-26 12:49:57,272 - __main__ - INFO - Extracting embeddings for 21122 texts in 331 batches
+2025-08-26 12:50:07,863 - __main__ - INFO - Processed 50/331 batches
+2025-08-26 12:50:18,550 - __main__ - INFO - Processed 100/331 batches
+2025-08-26 12:50:29,342 - __main__ - INFO - Processed 150/331 batches
+2025-08-26 12:50:39,903 - __main__ - INFO - Processed 200/331 batches
+2025-08-26 12:50:50,585 - __main__ - INFO - Processed 250/331 batches
+2025-08-26 12:51:01,249 - __main__ - INFO - Processed 300/331 batches
+2025-08-26 12:51:07,690 - __main__ - INFO - Caching embeddings to val_embeddings.npy
+2025-08-26 12:51:08,091 - __main__ - INFO - Extracting embeddings for 21123 texts in 331 batches
+2025-08-26 12:51:18,694 - __main__ - INFO - Processed 50/331 batches
+2025-08-26 12:51:29,345 - __main__ - INFO - Processed 100/331 batches
+2025-08-26 12:51:40,262 - __main__ - INFO - Processed 150/331 batches
+2025-08-26 12:51:51,314 - __main__ - INFO - Processed 200/331 batches
+2025-08-26 12:52:02,006 - __main__ - INFO - Processed 250/331 batches
+2025-08-26 12:52:12,521 - __main__ - INFO - Processed 300/331 batches
+2025-08-26 12:52:18,715 - __main__ - INFO - Caching embeddings to test_embeddings.npy
+2025-08-26 12:52:20,147 - __main__ - INFO - Feature dimensions - X_train: (168980, 768), y_train: (168980, 28)
+2025-08-26 12:52:20,151 - __main__ - INFO - Label distribution - Mean labels per sample: 1.18
+2025-08-26 12:52:20,179 - __main__ - INFO - Training XGBoost model...
+2025-08-26 12:52:20,180 - __main__ - INFO - Training and evaluating XGBoost
+2025-08-26 12:52:20,180 - __main__ - INFO - Optimizing hyperparameters for XGBoostMultiLabel
+2025-08-26 12:52:20,189 - __main__ - INFO - Testing 50 parameter combinations
+2025-08-26 12:52:20,350 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 13:31:02,508 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 14:05:40,548 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 14:48:40,084 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 15:19:26,462 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 15:49:27,393 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 16:00:35,556 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 16:09:06,726 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 16:17:36,011 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 16:26:03,707 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 16:34:44,703 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 17:03:55,629 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 17:23:52,069 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 17:41:14,956 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 17:59:31,448 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 18:16:51,652 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 18:28:33,747 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 18:40:18,584 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 18:51:59,705 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 19:03:41,167 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 19:15:21,518 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 19:35:28,376 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 19:55:38,199 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 20:15:46,325 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 20:35:52,309 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 20:55:58,906 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 21:19:48,443 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 21:44:15,740 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 22:08:31,445 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 22:32:41,911 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 22:53:39,298 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-26 23:36:01,991 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 00:18:49,176 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 01:01:20,515 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 01:43:46,564 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 02:26:15,679 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 02:41:52,819 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 02:57:35,586 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 03:13:15,429 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 03:28:55,895 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 03:44:33,582 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 04:14:13,435 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 04:44:07,972 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 05:13:52,370 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 05:43:37,792 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 06:13:18,639 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 06:24:20,983 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 06:35:25,061 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 06:46:27,330 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 06:57:41,031 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 07:08:40,792 - __main__ - INFO - Completed 10/50 trials. Best score: 0.2849
+2025-08-27 07:08:41,402 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 07:12:24,204 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 07:16:08,493 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 07:19:50,469 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 07:23:32,235 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 07:27:13,690 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 07:44:14,312 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 08:01:22,714 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 08:18:25,457 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 08:35:28,990 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 08:51:36,595 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 09:14:16,549 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 09:37:02,483 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 10:00:47,615 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 10:24:31,850 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 10:47:08,066 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 11:31:03,581 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 12:15:23,228 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 12:59:23,045 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 13:43:34,417 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 14:27:44,026 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 14:43:23,850 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 14:59:05,381 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 15:14:45,223 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 15:30:41,795 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 15:46:16,831 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 15:49:57,938 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 15:53:38,167 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 15:57:17,057 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 16:00:56,568 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 16:04:35,383 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 16:08:28,924 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 16:12:20,985 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 16:16:11,529 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 16:20:03,018 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 16:23:54,741 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 16:52:31,751 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 17:21:26,824 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 17:50:11,283 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 18:20:03,679 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 18:48:40,575 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 19:09:03,155 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 19:29:34,167 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 19:50:01,090 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 20:10:24,089 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 20:30:41,245 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 20:50:53,372 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 21:11:10,422 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 21:31:25,142 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 21:51:34,822 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 22:11:48,167 - __main__ - INFO - Completed 20/50 trials. Best score: 0.2849
+2025-08-27 22:11:49,124 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 22:47:23,244 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 23:23:25,694 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-27 23:59:09,759 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 00:34:52,668 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 01:10:23,525 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 01:27:04,005 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 01:43:50,269 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 02:00:31,822 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 02:17:14,921 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 02:33:48,107 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 02:43:35,388 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 02:53:10,659 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 03:02:56,407 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 03:12:41,858 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 03:22:19,101 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 03:26:00,436 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 03:29:40,350 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 03:33:21,641 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 03:37:01,543 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 03:40:42,884 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 03:47:39,883 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 03:54:36,122 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 04:01:31,243 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 04:08:27,046 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 04:15:22,750 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 04:43:05,290 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 05:11:07,941 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 05:39:00,837 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 06:06:56,344 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 06:34:45,349 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 06:41:53,638 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 06:49:01,486 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 06:56:09,733 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 07:03:16,543 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 07:10:24,338 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 07:15:56,685 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 07:21:30,279 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 07:27:02,608 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 07:32:40,193 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 07:38:11,685 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 07:48:46,883 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 07:59:22,510 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 08:09:56,348 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 08:20:31,030 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 08:31:03,880 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 08:47:29,764 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 09:03:20,765 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 09:19:09,440 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 09:34:57,441 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 09:50:40,026 - __main__ - INFO - Completed 30/50 trials. Best score: 0.2849
+2025-08-28 09:50:40,728 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 10:07:36,693 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 10:24:44,955 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 10:42:31,254 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 11:00:10,190 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 11:17:45,146 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 11:49:12,372 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 12:21:13,049 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 12:53:03,465 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 13:38:54,960 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 14:56:18,263 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 15:24:04,279 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 15:51:47,053 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 16:14:22,195 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 16:24:22,500 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 16:34:24,627 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 16:38:05,100 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 16:41:45,028 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 16:45:25,334 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 16:49:05,170 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 16:52:45,040 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 17:08:17,413 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 17:23:38,071 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 17:39:08,322 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 17:54:43,561 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 18:09:54,869 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 18:19:14,998 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 18:28:37,655 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 18:37:58,400 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 18:47:19,891 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 18:56:37,803 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 19:17:15,668 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 19:38:54,965 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 20:00:23,363 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 20:21:59,786 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 20:42:39,947 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 21:01:00,512 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 21:19:19,072 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 21:37:32,942 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 21:55:30,477 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 22:13:48,897 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 22:35:50,742 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 22:57:53,316 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 23:19:50,005 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-28 23:41:42,444 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 00:03:37,129 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 00:07:30,757 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 00:11:23,508 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 00:15:16,851 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 00:19:10,623 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 00:23:03,644 - __main__ - INFO - Completed 40/50 trials. Best score: 0.2852
+2025-08-29 00:23:03,834 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 00:37:09,703 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 00:50:58,375 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 01:04:44,374 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 01:18:46,627 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 01:32:32,024 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 01:48:53,419 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 02:05:17,014 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 02:21:34,969 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 02:37:54,382 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 02:54:11,289 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 03:03:35,767 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 03:13:01,410 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 03:22:47,864 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 03:32:10,637 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 03:41:30,958 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 03:45:01,703 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 03:48:34,534 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 03:52:05,233 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 03:55:37,447 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 03:59:09,502 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 04:10:06,758 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 04:21:06,008 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 04:32:03,060 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 04:43:11,158 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 04:54:07,997 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 04:57:46,632 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 05:01:24,966 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 05:05:03,651 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 05:08:42,900 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 05:12:21,525 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 05:35:47,376 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 05:59:22,689 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 06:23:00,833 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 06:46:30,048 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 07:09:56,710 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 07:50:00,104 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 08:30:26,688 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 09:10:45,578 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 09:50:58,767 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 10:31:37,859 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 10:35:45,656 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 10:39:50,779 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 10:43:57,815 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 10:48:02,009 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 10:52:08,651 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 11:44:01,039 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 12:52:39,105 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 14:01:21,075 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 14:41:58,306 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 15:48:38,956 - __main__ - INFO - Completed 50/50 trials. Best score: 0.2852
+2025-08-29 15:48:38,956 - __main__ - INFO - Best hyperparameters found with score 0.2852
+2025-08-29 15:48:40,723 - __main__ - INFO - Training final XGBoost model with optimized parameters
+2025-08-29 15:48:40,723 - __main__ - INFO - Training XGBoost multi-label classifier
+2025-08-29 16:30:19,940 - __main__ - INFO - Evaluating on validation set
+2025-08-29 16:30:38,279 - __main__ - INFO - Evaluating on test set
+2025-08-29 16:30:53,317 - __main__ - INFO - XGBoost training completed successfully
+2025-08-29 16:30:54,510 - __main__ - INFO - Training LightGBM model...
+2025-08-29 16:30:54,511 - __main__ - INFO - Training and evaluating LightGBM
+2025-08-29 16:30:54,511 - __main__ - INFO - Optimizing hyperparameters for LightGBMMultiLabel
+2025-08-29 16:30:54,570 - __main__ - INFO - Testing 50 parameter combinations
+2025-08-29 16:30:54,758 - __main__ - INFO - Training LightGBM multi-label classifier
